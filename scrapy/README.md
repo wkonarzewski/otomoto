@@ -1,0 +1,1 @@
+# Scraping Opel Astra offers from otomoto.pl with SCRAPY
