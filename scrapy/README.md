@@ -11,6 +11,6 @@ How to run:\
 ```scrapy crawl offers -o offer_links.csv```  
 
 - cars - this spider scrapes data from all links gathered by ```offers``` spider\
-By default data from first 100 links will be scraped. In order to scrap data from all links set parameter ```only_100``` to ```False``` in the 8th line of ```offers_data.py``` file.  
+By default data from first 100 links will be scraped. In order to scrap data from all links set parameter ```only_100``` to ```False``` in the 6th line of ```offers_data.py``` file.  
 How to run:\
 ```scrapy crawl cars -o cars_data.csv```  
