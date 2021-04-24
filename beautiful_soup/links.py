@@ -49,7 +49,7 @@ def get_offer_links(urls, only_100=True):
             offer_links.append(
                 x["href"]
             )  # retrieving links to offers and appending to result list
-            if only_100 and len(offer_links) == 10:
+            if only_100 and len(offer_links) == 100:
                 print("Creating list of links to first 100 offers: DONE")
                 return offer_links
     print("Creating list of links to all offers: DONE")

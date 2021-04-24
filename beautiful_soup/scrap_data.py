@@ -2,6 +2,7 @@ from urllib import request
 from bs4 import BeautifulSoup as BS
 import re
 import pandas as pd
+from tqdm import tqdm
 
 
 def scrap(offer_links):
@@ -36,9 +37,11 @@ def scrap(offer_links):
             "price": [],
             "currency": [],
         }
-    )
+    ) # empty dataframe in which scraped data will be stored
 
-    for link in offer_links:
+    print("Scraping data: IN PROGRESS...")
+
+    for link in tqdm(offer_links):
         html = request.urlopen(link)
         bs = BS(html.read(), "html.parser")
         try:
@@ -182,7 +185,9 @@ def scrap(offer_links):
             used = ""
         try:
             price = int(
-                re.sub("[^0-9]", "", bs.find("div", {"class": "offer-price"})["data-price"])
+                re.sub(
+                    "[^0-9]", "", bs.find("div", {"class": "offer-price"})["data-price"]
+                )
             )
         except:
             price = ""
@@ -216,10 +221,11 @@ def scrap(offer_links):
             "used": used,
             "price": price,
             "currency": currency,
-        }
+        } # creating a dictionary with features of every car
 
-        # car = {"url": url,"source": source}
+        df = df.append(car, ignore_index=True) # appending car to dataframe
 
-        df = df.append(car, ignore_index=True)
-        df.to_csv("results.csv", index=False)
+    print("Scraping data: DONE")
+    df.to_csv("bs_cars.csv", index=False) # exporting datafram to csv file
+
     return df
