@@ -15,5 +15,5 @@ Scraped links can be found in exported ```offer_links.csv``` file.
 - cars - this spider scrapes data from all links gathered by ```offers``` spider\
 By default data from first 100 links will be scraped. In order to scrap data from all links set parameter ```only_100``` to ```False``` in the 6th line of ```offers_data.py``` file.  
 How to run:\
-```scrapy crawl cars -o cars_data.csv``` \ 
+```scrapy crawl cars -o cars_data.csv```  \ 
 Scraped data can be found in exported ```cars_data.csv``` file.
