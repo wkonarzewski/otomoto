@@ -29,7 +29,7 @@ def get_offer_links(urls, only_100=True):
         html = request.urlopen(url)
         bs = BS(html.read(), 'html.parser')
         chunks = bs.find_all('a', {'class':'offer-title__link'}) # creating list of html chunks where links are stored
-        for x in chunks: # iterating over links to offers from a single page
+        for x in chunks: 
             offer_links.append(x['href']) # retrieving links to offers and appending to result list
             if only_100 and len(offer_links) == 100:
                 print('Creating list of links to first 100 offers: DONE')
