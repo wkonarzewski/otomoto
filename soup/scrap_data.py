@@ -226,6 +226,4 @@ def scrap(offer_links):
         df = df.append(car, ignore_index=True) # appending car to dataframe
 
     print("Scraping data: DONE")
-    df.to_csv("bs_cars.csv", index=False) # exporting datafram to csv file
-
     return df
