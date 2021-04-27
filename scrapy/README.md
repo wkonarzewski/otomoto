@@ -1,7 +1,7 @@
 # Scraping Opel Astra offers from otomoto.pl with SCRAPY
 \
 Put both files (```links_offers.py``` and ```offers_data.py``` into spiders directory.
-\
+
 
 There are two spiders:  
 
