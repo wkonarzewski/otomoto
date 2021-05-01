@@ -2,10 +2,10 @@
 
 
 ### How does it work:
-- open the website
-- creating list of links to all pages
-- creating list of links to offers from all pages
-- scraping desired data from every offer
+- Open the website and accept the cookies
+- Collect every cars’ link from all/100 pages 
+- Use the link collected above enter each them
+- Scraping desired data from each page of cars
 
 
 ### Before run the file:
