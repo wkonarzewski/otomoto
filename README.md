@@ -3,7 +3,7 @@
 Detailed instructions how to run every scraper can be found within each folder.
 
 
-## Performance comparison:
+## Performance comparison (on first 100 offers only):
 - soup 
 
 1m 19s 41ms
