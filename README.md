@@ -1,9 +1,9 @@
-## Web scraping project
+# Web scraping project
 
 Detailed instructions how to run every scraper can be found within each folder.
 
 
-# Performance comparison:
+## Performance comparison:
 - soup 
 
 1m 19s 41ms
@@ -19,4 +19,6 @@ second scraper: 10s 15ms
 8h 28m 43s
 
 
-RESULT: 1. scrapy 2. soup 3. selenium
+### RESULTS: 
+
+1. scrapy 2. soup 3. selenium
